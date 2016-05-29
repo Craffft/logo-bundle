@@ -10,23 +10,6 @@
  */
 
 /**
- * Register the namespaces
- */
-ClassLoader::addNamespaces(array
-(
-    'Craffft\\Logo',
-));
-
-/**
- * Register the classes
- */
-ClassLoader::addClasses(array
-(
-    // Modules
-    'Craffft\\Logo\\ModuleLogo' => 'system/modules/logo/modules/ModuleLogo.php',
-));
-
-/**
  * Register the templates
  */
 TemplateLoader::addFiles(array

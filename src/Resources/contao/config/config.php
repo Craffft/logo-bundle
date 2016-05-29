@@ -11,5 +11,5 @@
 
 array_insert($GLOBALS['FE_MOD']['miscellaneous'], 3, array
 (
-    'logo' => 'ModuleLogo'
+    'logo' => '\\Craffft\\LogoBundle\\Modules\\ModuleLogo'
 ));

@@ -9,9 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace Craffft\Logo;
+namespace Craffft\LogoBundle\Modules;
 
+use Contao\BackendTemplate;
+use Contao\File;
+use Contao\FilesModel;
 use Contao\Module;
+use Contao\Validator;
 
 class ModuleLogo extends Module
 {
@@ -26,7 +30,7 @@ class ModuleLogo extends Module
     public function generate()
     {
         if (TL_MODE == 'BE') {
-            $objTemplate = new \BackendTemplate('be_wildcard');
+            $objTemplate = new BackendTemplate('be_wildcard');
             $objTemplate->wildcard = '### LOGO MODULE ###';
 
             return $objTemplate->parse();
@@ -36,10 +40,10 @@ class ModuleLogo extends Module
             return '';
         }
 
-        $objFile = \FilesModel::findByUuid($this->singleSRC);
+        $objFile = FilesModel::findByUuid($this->singleSRC);
 
         if ($objFile === null) {
-            if (!\Validator::isUuid($this->singleSRC)) {
+            if (!Validator::isUuid($this->singleSRC)) {
                 return '<p class="error">' . $GLOBALS['TL_LANG']['ERR']['version2format'] . '</p>';
             }
 
@@ -57,7 +61,7 @@ class ModuleLogo extends Module
 
     protected function compile()
     {
-        $objImage = new \File($this->singleSRC);
+        $objImage = new File($this->singleSRC);
         $arrMeta = $this->arrMeta[$objImage->basename];
 
         if ($arrMeta[0] == '') {
