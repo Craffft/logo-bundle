@@ -14,5 +14,5 @@
  */
 TemplateLoader::addFiles(array
 (
-    'mod_logo' => 'vendor/craffft/logobundle/src/Resources/contao/templates',
+    'mod_logo' => 'vendor/craffft/logo-bundle/src/Resources/contao/templates',
 ));
