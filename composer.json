@@ -1,6 +1,6 @@
 {
     "name": "craffft/logo-bundle",
-    "type": "symfony-bundle",
+    "type": "contao-bundle",
     "description": "Contao 4 logo bundle",
     "keywords": ["logo", "image"],
     "license": "MIT",
