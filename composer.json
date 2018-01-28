@@ -16,7 +16,7 @@
         "source": "https://github.com/Craffft/logo-bundle"
     },
     "require": {
-        "php": ">=5.4.0",
+        "php": ">=7.1",
         "contao/core-bundle": "~4.4"
     },
     "require-dev": {
